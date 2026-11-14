@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Мария Горбузова — студентка программной инженерии СПбГУ. Учебные проекты, немного обо мне и о том, что вдохновляет.">
+  <meta name="theme-color" content="#f7eee3">
+  <title>Мария Горбузова — маленькая вселенная</title>
+  <link rel="icon" href="assets/images/star.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <input class="theme-input" type="checkbox" id="dark-theme" aria-label="Тёмная тема">
+  <div class="site">
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Мария Горбузова — на главную">✦</a>
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#home">Главная</a><a href="#about">Обо мне</a><a href="#projects">Проекты</a><a href="#interests">Увлечения</a><a href="#contacts">Контакты</a>
+        </nav>
+        <details class="mobile-nav"><summary>Меню <span>＋</span></summary><nav aria-label="Мобильная навигация"><a href="#home">Главная</a><a href="#about">Обо мне</a><a href="#projects">Проекты</a><a href="#interests">Увлечения</a><a href="#contacts">Контакты</a></nav></details>
+        <label class="theme-toggle" for="dark-theme" title="Переключить тему"><span aria-hidden="true" class="sun">☀</span><span aria-hidden="true" class="moon">☾</span><span class="visually-hidden">Переключить светлую и тёмную тему</span></label>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero container" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-star">✦</span> Личная страница · Санкт-Петербург</p>
+          <h1 id="hero-title">Мария<br><em>Горбузова</em><span class="name-stroke" aria-hidden="true"></span></h1>
+          <p class="hero-subtitle">Студентка 2 курса СПбГУ.<br>Программная инженерия.</p>
+          <p class="hero-description">Привет! Я Маша. Люблю разбираться в сложных вещах, писать код и находить маленькие радости за пределами экрана.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#about">Обо мне <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#projects">Мои проекты <span aria-hidden="true">↗</span></a></div>
+          <p class="handwritten hero-note">между логикой и вдохновением</p>
+        </div>
+        <div class="hero-art">
+          <div class="hero-glow" aria-hidden="true"></div><div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✦</span><span class="spark spark-three" aria-hidden="true">✧</span>
+          <img class="portrait" src="assets/images/maria-hero.webp" alt="Мария Горбузова в сиреневом платье" width="850" height="1350" fetchpriority="high">
+          <p class="art-note handwritten">немного кода,<br>немного космоса</p>
+          <span class="photo-caption">student / developer / dreamer</span>
+        </div>
+      </section>
+
+      <section class="interests section container" id="interests" aria-labelledby="interests-title">
+        <div class="section-heading"><h2 id="interests-title">Мои <em>увлечения</em></h2><span class="heading-line"></span><p class="handwritten">то, что меня вдохновляет</p></div>
+        <p class="section-intro">Когда закрываю редактор кода, открывается другая часть моей вселенной.</p>
+        <div class="row g-4 hobby-grid">
+          <div class="col-12 col-sm-6 col-xl-3"><details class="hobby-card hobby-sport"><summary><span class="card-number">01 / в движении</span><span class="card-title">Спорт <span aria-hidden="true">↗</span></span><span class="card-description">Зал, энергия<br>и время для себя.</span><img class="hobby-illustration" src="assets/images/sport.svg" alt="" width="300" height="320"><span class="more-note">Маленькое признание <span aria-hidden="true">＋</span></span></summary><div class="personal-note"><p>«Если я не отвечаю, скорее всего, я в зале».</p></div></details></div>
+          <div class="col-12 col-sm-6 col-xl-3"><details class="hobby-card hobby-gym"><summary><span class="card-number">02 / чувство полёта</span><span class="card-title">Гимнастика <span aria-hidden="true">↗</span></span><span class="card-description">С 1 по 7 класс.<br>Кандидат в мастера спорта.</span><img class="hobby-illustration" src="assets/images/gymnast.svg" alt="" width="340" height="320"><span class="more-note">Маленькое признание <span aria-hidden="true">＋</span></span></summary><div class="personal-note"><p>«В детстве научилась летать. Приземляться оказалось сложнее».</p></div></details></div>
+          <div class="col-12 col-sm-6 col-xl-3"><details class="hobby-card hobby-books"><summary><span class="card-number">03 / другие миры</span><span class="card-title">Книги <span aria-hidden="true">↗</span></span><span class="card-description">Научная фантастика,<br>космос и сознание.</span><img class="hobby-illustration" src="assets/images/planet.svg" alt="" width="340" height="320"><span class="more-note">Маленькое признание <span aria-hidden="true">＋</span></span></summary><div class="personal-note"><p>«Если в книге нет вселенской загадки, зачем я её читала?»</p></div></details></div>
+          <div class="col-12 col-sm-6 col-xl-3"><details class="hobby-card hobby-craft"><summary><span class="card-number">04 / ручная работа</span><span class="card-title">Вязание <span aria-hidden="true">↗</span></span><span class="card-description">Один крючок.<br>Много уютных идей.</span><img class="hobby-illustration" src="assets/images/yarn.svg" alt="" width="340" height="320"><span class="more-note">Маленькое признание <span aria-hidden="true">＋</span></span></summary><div class="personal-note"><p>«Один крючок, моток пряжи и минус шесть часов свободного времени».</p></div></details></div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title"><div class="container">
+        <div class="row g-5 align-items-start"><div class="col-lg-5"><p class="eyebrow">01 / немного обо мне</p><h2 id="about-title">Из Волгограда —<br><em>навстречу новому.</em></h2><div class="journey-art" aria-hidden="true"><span>Волгоград</span><svg viewBox="0 0 420 130"><path d="M20 100 C90 -25 260 180 385 25"/><circle cx="20" cy="100" r="5"/><path d="m375 25 12-4-1 13"/></svg><span>Санкт-Петербург ✦</span></div><p class="handwritten about-note">Всё начинается с любопытства</p></div>
+        <div class="col-lg-7 about-story"><p class="lead-text">Мне всегда хотелось понять,<br><em>как всё устроено.</em></p><p>Я родилась и выросла в Волгограде, училась в физико-математическом лицее. В девятом классе поняла, что больше всего меня увлекают математика, физика и информатика. Так появилось направление, в котором захотелось двигаться дальше.</p><p>Окончила школу с золотой медалью, хорошо сдала ЕГЭ и поступила в Санкт-Петербургский государственный университет. Сейчас я на втором курсе программной инженерии: учусь, пишу код и постепенно собираю свой опыт из небольших проектов.</p><p>Большая часть времени уходит на учёбу и программирование. Но в моей жизни по-прежнему есть место спорту, книгам и вещам, которые можно сделать своими руками.</p><div class="qualities"><span>Внимание к деталям</span><span>Упорство</span><span>Любопытство</span></div></div></div>
+        <div class="gym-banner"><img src="assets/images/gymnast.svg" width="340" height="320" alt="" loading="lazy"><p>С первого по седьмой класс — спортивная гимнастика.<br><em>Вместе с КМС осталась привычка пробовать ещё раз.</em></p><span aria-hidden="true">✦</span></div>
+      </div></section>
+
+      <section class="projects section container" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><div><p class="eyebrow">02 / от идеи к коду</p><h2 id="projects-title">Мои <em>проекты</em></h2></div><span class="heading-line"></span><p class="handwritten">учусь, пробую, создаю</p></div>
+        <p class="section-intro">Учебные задачи, в которых теория постепенно становится чем-то работающим.</p>
+        <div class="row g-4 project-grid">
+          <div class="col-lg-4"><article class="project-card"><div class="project-visual visual-convolution"><img src="assets/images/convolution.svg" alt="Два пиксельных фрагмента до и после фильтрации" width="350" height="250" loading="lazy"><span class="visual-label">pixels → possibilities</span></div><div class="project-copy"><p class="eyebrow">01 / обработка изображений</p><h3>Свёртка изображений</h3><p>Учебный проект по обработке RGB-изображений: свёрточные ядра и разные способы работы с границами изображения.</p><div class="tags"><span>C</span><span>RGB</span><span>Свёрточные ядра</span></div><a class="project-link" href="https://github.com/gorbuzova/convolution_rgb" target="_blank" rel="noopener noreferrer">Смотреть на GitHub <span aria-hidden="true">↗</span></a></div></article></div>
+          <div class="col-lg-4"><article class="project-card"><div class="project-visual visual-weather"><img src="assets/images/weather.svg" alt="Солнце и объёмное облако" width="350" height="250" loading="lazy"><span class="visual-label">a little forecast for today</span></div><div class="project-copy"><p class="eyebrow">02 / android-приложение</p><h3>Погода под рукой</h3><p>Приложение с прогнозом через Open-Meteo, геокодированием и локальным хранением данных.</p><div class="tags"><span>Kotlin</span><span>Compose</span><span>Retrofit</span><span>Room</span></div><p class="project-status">Учебный проект · ссылку добавлю позже</p></div></article></div>
+          <div class="col-lg-4"><article class="project-card"><div class="project-visual visual-lint"><img src="assets/images/linter.svg" alt="Листы кода с отметкой проверки" width="350" height="250" loading="lazy"><span class="visual-label">small rules, clearer code</span></div><div class="project-copy"><p class="eyebrow"><span class="status-dot"></span> 03 / сейчас в работе</p><h3>Линтер SystemVerilog</h3><p>Участвую в развитии открытого verihogg-lint: добавляю правила статического анализа, диагностики и тесты.</p><div class="tags"><span>SystemVerilog / Verilog</span><span>Статический анализ</span></div><a class="project-link" href="https://github.com/gorbuzova/verihogg-lint" target="_blank" rel="noopener noreferrer">Репозиторий проекта <span aria-hidden="true">↗</span></a></div></article></div>
+        </div>
+        <div class="skills"><h3>В моём наборе</h3><div class="skill-tags"><span>✦ <b>C</b></span><span>✦ <b>Python</b></span><span>✦ <b>Kotlin</b></span><span class="learning">✧ <b>C++</b><small>начинаю изучать</small></span></div></div>
+      </section>
+
+      <section class="contact section" id="contacts" aria-labelledby="contact-title"><div class="container"><p class="eyebrow">03 / продолжим знакомство</p><div class="contact-top"><h2 id="contact-title">Будем <em>на связи?</em></h2><span aria-hidden="true" class="contact-star">✦</span></div><p class="contact-description">Мои проекты и маленькие шаги в разработке живут на GitHub.<br>Заглядывайте — буду рада знакомству.</p><div class="row g-4 contact-links"><div class="col-md-4"><a href="https://github.com/gorbuzova" target="_blank" rel="noopener noreferrer"><span>GitHub <span aria-hidden="true">↗</span></span><small>@gorbuzova</small></a></div><div class="col-md-4"><div class="contact-placeholder"><span>Telegram</span><!-- TODO: заменить блок ссылкой на Telegram, когда будет известен адрес. --><small>Добавлю чуть позже</small></div></div><div class="col-md-4"><div class="contact-placeholder"><span>Электронная почта</span><!-- TODO: заменить блок ссылкой mailto: с настоящим адресом. --><small>Добавлю чуть позже</small></div></div></div></div></section>
+    </main>
+    <footer class="footer container"><a href="#home">Мария Горбузова <span aria-hidden="true">✦</span></a><p>Сделано с любопытством и теплом · 2026</p><a href="#home">Наверх ↑</a></footer>
+  </div>
+</body>
+</html>
