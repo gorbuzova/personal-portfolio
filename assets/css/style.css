@@ -415,7 +415,7 @@ a:focus-visible, summary:focus-visible {
 .hero h1 em { color: inherit; }
 .hero-art { height: 700px; margin-bottom: -28px; z-index: 1; }
 .hero-art::before { display: none; }
-.portrait { width: 100%; height: 100%; max-width: none; mask-image: linear-gradient(#000 70%, #000e6 80%, #00080 91%, transparent 100%); }
+.portrait { width: 100%; height: 100%; max-width: none; mask-image: linear-gradient(#000 70%, #000000e6 80%, #00000080 91%, transparent 100%); }
 .button-primary { background: linear-gradient(110deg, #aa682c, #e68c37); border-color: transparent; }
 .button-outline { background: #fff4e333; }
 .interests { position: relative; z-index: 2; padding-top: 12px; }
@@ -504,7 +504,7 @@ a:focus-visible, summary:focus-visible {
   inset: 0;
   background: url('../images/maria-user-cutout.png') center bottom / contain no-repeat;
   filter: blur(12px);
-  mask-image: linear-gradient(transparent 74%, #00070 86%, transparent 100%);
+  mask-image: linear-gradient(transparent 74%, #00000070 86%, transparent 100%);
   pointer-events: none;
 }
 .interests, .projects, .about, .contact { position: relative; isolation: isolate; }
@@ -558,3 +558,117 @@ a:focus-visible, summary:focus-visible {
 .mobile-nav summary .icon, .more-note .icon { width: 16px; height: 16px; }
 .footer > a:last-child { display: inline-flex; align-items: center; gap: 7px; }
 .footer .icon { width: 16px; height: 16px; }
+
+
+/* Solar light, orbit and city vignettes: all decoration stays below content. */
+.hero::before {
+  inset: -96px -36px -70px;
+  background: linear-gradient(90deg, #fbf1df25, #fbf1df55 48%, transparent), url('../images/background-sun.webp') center / cover no-repeat;
+  opacity: .92;
+}
+.hero::after { opacity: .08; }
+.hero-art::before {
+  display: block;
+  inset: -2% -30% 0 -28%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 63% 42%, #e9984590, transparent 66%),
+    url('../images/background-solar-mesh.webp') 64% center / cover;
+  mask-image: radial-gradient(ellipse closest-side, #000 20%, #000000b3 60%, transparent 100%);
+  filter: blur(16px);
+  opacity: .76;
+}
+.hero-orbit {
+  position: absolute;
+  z-index: 0;
+  width: 137%;
+  max-width: none;
+  height: 100%;
+  left: -23%;
+  top: 0;
+  overflow: visible;
+  fill: none;
+  stroke: #fffdf2;
+  stroke-width: .95;
+  opacity: .88;
+  pointer-events: none;
+}
+.hero-orbit .orbit-star { fill: #fffdf2; stroke: none; }
+.hero-art .portrait { z-index: 2; }
+.hero-art::after { z-index: 1; }
+.interests::before, .projects::before, .about::before {
+  background: url('../images/background-solar-mesh.webp') center / cover no-repeat;
+  opacity: .43;
+}
+.interests::before { inset: -80px -170px -105px; background-position: 35% 60%; }
+.projects::before { inset: -60px -180px -60px; background-position: 75% center; }
+.about::before { inset: -40px 0 -50px; opacity: .32; background-position: 30% center; }
+.contact::before {
+  background: url('../images/background-contact-hands.webp') center 57% / cover no-repeat;
+  opacity: .7;
+}
+.hobby-grid { row-gap: 52px !important; }
+.hobby-card {
+  isolation: isolate;
+  overflow: visible;
+  background: var(--panel);
+}
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(150deg, #fff9eead 8%, #fff4df0d 55%, #eeb47633),
+    url('../images/background-solar-mesh.webp') 15% 55% / auto 145%;
+  opacity: .85;
+  pointer-events: none;
+}
+.hobby-gym::before { background-position: center, 65% 80%; }
+.hobby-books::before { background-position: center, 88% 15%; }
+.hobby-craft::before { background-position: center, 25% 80%; }
+.hobby-card .hobby-illustration { max-width: none; bottom: 28px; }
+.hobby-sport .hobby-illustration { width: calc(100% + 48px); height: 282px; right: -91px; }
+.hobby-gym .hobby-illustration { width: calc(100% + 60px); height: 280px; right: -30px; }
+.hobby-books .hobby-illustration { width: calc(100% + 78px); height: 250px; right: -39px; }
+.hobby-craft .hobby-illustration { width: calc(100% + 65px); height: 237px; right: -33px; mask-image: none; }
+.more-note { z-index: 4; }
+.city-composition { position: relative; height: 345px; margin-top: 30px; }
+.city-image {
+  position: absolute;
+  width: 76%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid #fff8ebcc;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px #80512720;
+}
+.city-volgograd { top: 0; left: -4px; transform: rotate(-4deg); }
+.city-petersburg { top: 160px; right: -6px; transform: rotate(4deg); }
+#dark-theme:checked ~ .site .hero-art::before { opacity: .55; }
+#dark-theme:checked ~ .site .hobby-card::before { opacity: .3; }
+#dark-theme:checked ~ .site .contact::before { opacity: .3; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hobby-card .hobby-illustration { width: calc(100% + 55px); height: 268px; right: -28px; }
+}
+@media (max-width: 991px) {
+  .city-composition { width: 430px; max-width: 100%; height: 365px; margin-bottom: 20px; }
+  .city-petersburg { top: 175px; }
+}
+@media (max-width: 767px) {
+  .hero::before { inset: -78px -24px 38%; background-position: center, right center; opacity: .75; }
+  .hero-art::before { inset: -8% -30% 0; }
+  .hero-orbit { width: 140%; left: -20%; }
+  .interests::before, .projects::before { opacity: .38; }
+  .about::before { opacity: .28; }
+  .contact::before { opacity: .58; background-position: 68% center; }
+  .hobby-card .hobby-illustration { width: calc(100% + 36px); max-width: none; height: 265px; right: -25px; }
+  .hobby-gym .hobby-illustration { width: calc(100% + 66px); right: -33px; }
+  .hobby-craft .hobby-illustration { height: 233px; }
+}
+@media (max-width: 575px) {
+  .hobby-card .hobby-illustration { width: calc(100% + 45px); right: -24px; }
+  .hobby-gym .hobby-illustration { width: calc(100% + 70px); right: -35px; }
+  .city-composition { height: 325px; }
+  .city-petersburg { top: 145px; }
+}
