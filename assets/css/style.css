@@ -521,9 +521,9 @@ a:focus-visible, summary:focus-visible {
 .about::before { inset: -35px 0 -40px; background: url('../images/background-palm.webp') center / cover; opacity: .63; }
 .contact { background: transparent; }
 .contact::before { inset: -50px 0 -30px; background: url('../images/background-two-candles.webp') center / cover; opacity: .43; }
-.about::after, .contact::after { content: '✦'; position: absolute; color: #fffdf4; font: 18px Georgia, serif; opacity: .8; pointer-events: none; z-index: -1; }
+.about::after, .contact::after { content: ''; position: absolute; width: 18px; height: 18px; background: #fffdf4; clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); opacity: .8; pointer-events: none; z-index: -1; }
 .about::after { top: 33px; left: 29%; }
-.contact::after { top: 65px; right: 11%; font-size: 12px; }
+.contact::after { top: 65px; right: 11%; width: 12px; height: 12px; }
 #dark-theme:checked ~ .site .about::before,
 #dark-theme:checked ~ .site .contact::before { opacity: .20; }
 #dark-theme:checked ~ .site .projects::before,
@@ -532,6 +532,29 @@ a:focus-visible, summary:focus-visible {
 @media (max-width: 767px) {
   .about::before { background-position: 18% center; opacity: .35; }
   .contact::before { background-position: 65% center; opacity: .36; }
-  .about::after { left: auto; right: 12%; font-size: 12px; }
+  .about::after { left: auto; right: 12%; width: 12px; height: 12px; }
   .hero-art::after { filter: blur(8px); }
 }
+
+/* Code-native line icons never fall back to an operating system emoji font. */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.button .icon { color: var(--ink); }
+.theme-toggle span:not(.visually-hidden) { display: flex; align-items: center; justify-content: center; }
+.theme-toggle .icon { width: 18px; height: 18px; }
+.theme-toggle .sun,
+#dark-theme:checked ~ .site .moon { color: var(--ink); background: color-mix(in srgb, var(--accent) 17%, var(--surface)); border-radius: 50%; }
+#dark-theme:checked ~ .site .sun { color: var(--ink); background: transparent; }
+.mobile-nav summary .icon, .more-note .icon { width: 16px; height: 16px; }
+.footer > a:last-child { display: inline-flex; align-items: center; gap: 7px; }
+.footer .icon { width: 16px; height: 16px; }
