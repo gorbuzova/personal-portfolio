@@ -673,3 +673,121 @@ a:focus-visible, summary:focus-visible {
   .city-petersburg { top: 145px; }
 }
 .hobby-sport .hobby-illustration { right: -55px; }
+
+/* Readable type and a full-width hero light field. */
+body { font-size: 16px; }
+.hero::before { inset: -96px calc(50% - 50vw) -70px; }
+.interests::before { inset: -80px calc(50% - 50vw) -105px; }
+.projects::before { inset: -60px calc(50% - 50vw) -60px; }
+.hero-subtitle { font-size: 19px; }
+.hero-description {
+  max-width: 455px;
+  font: 400 25px/1.5 'Marck Script', cursive;
+  color: var(--ink);
+}
+.button { font-size: 15px; }
+.about-story > p { font-size: 16px; line-height: 1.85; }
+.gym-note p { font-size: 15px; }
+.section-intro { font-size: 16px; line-height: 1.8; max-width: 790px; }
+.project-copy > p:not(.eyebrow):not(.project-status) { font-size: 15px; line-height: 1.8; max-width: 90%; }
+.project-copy h3 { font-size: 36px; }
+.project-copy { min-height: 500px; }
+.eyebrow { font-size: 11px; }
+.tags span { font-size: 12px; }
+.project-link { font-size: 14px; gap: 12px; }
+.skill-tags b { font-size: 28px; }
+.skill-tags small { font-size: 11px; max-width: 90px; }
+.contact-description { font-size: 16px; }
+.contact-links a > span { font-size: 30px; }
+.contact-links small { font-size: 14px; overflow-wrap: anywhere; }
+.contact-links a { height: 100%; }
+.footer { font-size: 13px; }
+.footer p { font-size: 12px; }
+
+/* Airy apricot light blooms, without a landscape inside the hobby cards. */
+.hobby-grid { row-gap: 70px !important; }
+.hobby-card, .hobby-card summary { min-height: 380px; }
+.hobby-card { background: var(--surface); }
+.hobby-card summary { padding: 24px; }
+.hobby-card::before {
+  background:
+    radial-gradient(ellipse at 78% 91%, #eda45fa8, transparent 60%),
+    radial-gradient(ellipse at 18% 65%, #f8c58c8c, transparent 68%),
+    radial-gradient(ellipse at 100% 5%, #ddbbc34d, transparent 57%),
+    linear-gradient(135deg, #fff8ee, #f7dfca);
+  opacity: 1;
+}
+.hobby-gym::before { background: radial-gradient(ellipse at 72% 75%, #ecac66b3, transparent 68%), radial-gradient(ellipse at 10% 92%, #f4c1a280, transparent 55%), linear-gradient(145deg, #fff8ef, #f7ddc4); }
+.hobby-books::before { background: radial-gradient(ellipse at 82% 94%, #eeb674a8, transparent 65%), radial-gradient(ellipse at 82% 30%, #d0bdc64d, transparent 65%), linear-gradient(145deg, #fff9f0, #f3d8c5); }
+.hobby-craft::before { background: radial-gradient(ellipse at 85% 84%, #efaa6a9c, transparent 70%), radial-gradient(ellipse at 3% 78%, #edc7b880, transparent 65%), linear-gradient(145deg, #fff9ef, #f7dec8); }
+.card-title { z-index: 3; font-size: 36px; }
+.card-description { z-index: 3; font-size: 14px; max-width: 200px; }
+.hobby-trail { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; fill: none; stroke: #fffdf5; stroke-width: .85; opacity: .9; overflow: visible; pointer-events: none; }
+.hobby-trail path { vector-effect: non-scaling-stroke; }
+.hobby-card .hobby-illustration { z-index: 1; max-width: none; object-position: right bottom; --art-tilt: 0deg; transform: rotate(var(--art-tilt)); }
+.hobby-sport .hobby-illustration { width: 340px; height: 330px; right: -61px; bottom: -14px; }
+.hobby-gym .hobby-illustration { width: calc(100% + 100px); height: 310px; right: -43px; bottom: 65px; --art-tilt: -14deg; transform-origin: 58% 76%; }
+.hobby-books .hobby-illustration { width: calc(100% + 55px); height: 285px; right: -28px; bottom: -16px; }
+.hobby-craft .hobby-illustration { width: calc(100% + 68px); height: 285px; right: -27px; bottom: -36px; }
+.hobby-card:hover .hobby-illustration, .hobby-card[open] .hobby-illustration { transform: translateY(-5px) rotate(var(--art-tilt)); }
+.personal-note { margin-top: 42px; font-size: 27px; }
+.hobby-card:focus-within .personal-note { display: block; }
+.hobby-card:focus-within::details-content { content-visibility: visible; }
+
+/* Fine open curves run behind the sections, never across the portrait. */
+.interests::before, .projects::before, .about::before, .contact::before { z-index: -2; }
+.section-ribbon {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  pointer-events: none;
+  fill: none;
+  stroke-width: .8;
+}
+.section-ribbon path { vector-effect: non-scaling-stroke; }
+.ribbon-white { stroke: #fffdf5; opacity: .85; }
+.ribbon-orange { stroke: #c27a3d; opacity: .44; }
+.section-ribbon .ribbon-star { fill: #fffdf5; stroke: none; opacity: .9; }
+.about::after, .contact::after { display: none; }
+#dark-theme:checked ~ .site .hobby-card::before { opacity: .18; }
+#dark-theme:checked ~ .site .hobby-trail { opacity: .5; }
+#dark-theme:checked ~ .site .section-ribbon { opacity: .55; }
+@media (min-width: 576px) and (max-width: 1199px) {
+  .hobby-card, .hobby-card summary { min-height: 400px; }
+  .hobby-sport .hobby-illustration { height: 350px; width: 360px; }
+  .hobby-gym .hobby-illustration { width: calc(100% + 65px); height: 325px; right: -31px; }
+  .hobby-books .hobby-illustration { height: 305px; }
+  .hobby-craft .hobby-illustration { height: 300px; }
+}
+@media (max-width: 991px) {
+  .project-copy { min-height: 450px; }
+  .hero-description { max-width: 380px; font-size: 24px; }
+}
+@media (max-width: 767px) {
+  .hero::before { inset: -78px calc(50% - 50vw) 38%; }
+  .hero-description { max-width: 455px; font-size: 24px; }
+  .hero-subtitle { font-size: 18px; }
+  .button { font-size: 14px; }
+  .about-story > p { font-size: 15px; }
+  .gym-note p { font-size: 14px; }
+  .section-intro, .contact-description { font-size: 15px; }
+  .project-copy h3 { font-size: 35px; }
+  .project-copy { min-height: 460px; }
+  .section-ribbon { width: 165vw; }
+  .contact-links small { font-size: 14px; }
+}
+@media (max-width: 575px) {
+  .hobby-card, .hobby-card summary { min-height: 390px; }
+  .hobby-sport .hobby-illustration { height: 345px; width: 355px; right: -59px; }
+  .hobby-gym .hobby-illustration { width: calc(100% + 70px); height: 320px; right: -34px; }
+  .hobby-books .hobby-illustration { width: calc(100% + 34px); height: 295px; right: -18px; }
+  .hobby-craft .hobby-illustration { width: calc(100% + 50px); height: 285px; right: -22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hobby-card:hover .hobby-illustration, .hobby-card[open] .hobby-illustration { transform: rotate(var(--art-tilt)); }
+}
