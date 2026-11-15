@@ -493,7 +493,8 @@ a:focus-visible, summary:focus-visible {
 .hero::before {
   background: linear-gradient(#fbf1df40, #fbf1df65), url('../images/background-sun.webp') center / cover;
   filter: none;
-  opacity: .8;
+  transform: scaleX(-1);
+  opacity: .65;
   mask-image: linear-gradient(transparent, #000 18%, #000 78%, transparent);
 }
 .hero-art::after {
@@ -519,7 +520,7 @@ a:focus-visible, summary:focus-visible {
 .about { background: transparent; }
 .about::before { inset: -35px 0 -40px; background: url('../images/background-palm.webp') center / cover; opacity: .63; }
 .contact { background: transparent; }
-.contact::before { inset: -50px 0 -30px; background: url('../images/background-candles.webp') center / cover; opacity: .56; }
+.contact::before { inset: -50px 0 -30px; background: url('../images/background-two-candles.webp') center / cover; opacity: .43; }
 .about::after, .contact::after { content: '✦'; position: absolute; color: #fffdf4; font: 18px Georgia, serif; opacity: .8; pointer-events: none; z-index: -1; }
 .about::after { top: 33px; left: 29%; }
 .contact::after { top: 65px; right: 11%; font-size: 12px; }
