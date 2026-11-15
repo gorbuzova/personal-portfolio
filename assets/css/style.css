@@ -356,3 +356,135 @@ a:focus-visible, summary:focus-visible {
   .hobby-card:hover .hobby-illustration, .hobby-card[open] .hobby-illustration,
   .project-card:hover, .project-card:hover .project-visual img { transform: none; }
 }
+
+/* Sunlit editorial composition. All lighting stays below the portrait layer. */
+.site {
+  --bg: #fbf1df;
+  --ink: #4c2e1d;
+  --muted: #795a44;
+  --accent: #bd6b28;
+  --line: #d4af87;
+  --panel: #f3d5b4;
+  --surface: #fff8ec;
+  background:
+    radial-gradient(ellipse at 0% 30%, #efa94c40, transparent 26%),
+    radial-gradient(ellipse at 98% 66%, #c5b5a144, transparent 22%),
+    radial-gradient(ellipse at 8% 95%, #f3b15a55, transparent 22%), var(--bg);
+}
+.header-inner { border-bottom-color: #b990663d; }
+.hero {
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: 52% 48%;
+  min-height: 700px;
+  padding-top: 10px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: -100px -180px -90px;
+  background:
+    radial-gradient(ellipse at 76% 35%, #e49636a3, transparent 37%),
+    radial-gradient(ellipse at 35% 2%, #f8c78566, transparent 35%),
+    radial-gradient(ellipse at 4% 70%, #f8c07855, transparent 27%),
+    radial-gradient(ellipse at 100% 10%, #827b6b45, transparent 30%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 440px;
+  height: 480px;
+  top: -70px;
+  right: -150px;
+  opacity: .20;
+  background:
+    radial-gradient(ellipse at 70% 20%, #6a6253 0 9%, transparent 11%),
+    radial-gradient(ellipse at 30% 39%, #6a6253 0 10%, transparent 12%),
+    radial-gradient(ellipse at 75% 55%, #6a6253 0 12%, transparent 14%),
+    radial-gradient(ellipse at 45% 80%, #6a6253 0 8%, transparent 10%);
+  transform: rotate(-30deg);
+  filter: blur(18px);
+  pointer-events: none;
+}
+.hero-copy { align-self: center; padding-bottom: 70px; }
+.hero h1 { font-size: clamp(80px, 8.4vw, 118px); }
+.hero h1 em { color: var(--accent); }
+.hero-art { height: 700px; margin-bottom: -28px; z-index: 1; }
+.hero-art::before { display: none; }
+.portrait { width: 100%; height: 100%; max-width: none; mask-image: linear-gradient(#000 97%, transparent); }
+.button-primary { background: linear-gradient(110deg, #aa682c, #e68c37); border-color: transparent; }
+.button-outline { background: #fff4e333; }
+.interests { position: relative; z-index: 2; padding-top: 12px; }
+.hobby-card {
+  background: linear-gradient(135deg, #fff9edb8, #efbc8266), var(--panel);
+  border-color: #fffaf1;
+  box-shadow: 0 12px 36px #ad6c2c12;
+}
+.hobby-card .hobby-illustration { mask-image: none; }
+.hobby-sport .hobby-illustration { height: 240px; bottom: 35px; }
+.hobby-gym .hobby-illustration { width: calc(100% + 35px); height: 245px; right: -18px; bottom: 28px; }
+.hobby-books .hobby-illustration { width: calc(100% + 30px); height: 240px; bottom: 28px; }
+.hobby-craft .hobby-illustration { width: calc(100% + 24px); height: 215px; bottom: 28px; }
+.about { background: linear-gradient(115deg, #e6c09820, #f0bb7638, #ded4c120); }
+.project-card { position: relative; isolation: isolate; overflow: hidden; background: var(--surface); border-color: #fffaf1; }
+.project-visual { position: absolute; inset: 0; z-index: -2; height: 100%; width: 100%; min-height: 0; border-radius: inherit; }
+.project-visual img { inset: 0; height: 100%; width: 100%; max-width: none; object-fit: cover; opacity: .80; }
+.project-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, var(--surface), color-mix(in srgb, var(--surface) 92%, transparent) 36%, color-mix(in srgb, var(--surface) 25%, transparent));
+  pointer-events: none;
+}
+.project-copy { min-height: 390px; padding: 30px 26px 26px; }
+.project-copy h3 { max-width: 88%; }
+.project-copy > p:not(.eyebrow):not(.project-status) { max-width: 85%; color: var(--ink); }
+.project-copy .tags { max-width: 88%; }
+.tags span { background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.contact { background: radial-gradient(ellipse at 95% 100%, #eda74e47, transparent 60%); }
+#dark-theme:checked ~ .site { --bg: #2c2019; --surface: #3b2a20; --panel: #654024; --ink: #f7e5cc; --muted: #dbc2a5; --accent: #f1b575; --line: #926540; background: radial-gradient(ellipse at 90% 8%, #97501850, transparent 30%), var(--bg); }
+#dark-theme:checked ~ .site .hobby-card { background: linear-gradient(130deg, #493224, #76502c); border-color: var(--line); }
+#dark-theme:checked ~ .site .project-card { border-color: var(--line); }
+#dark-theme:checked ~ .site .project-visual img { opacity: .55; }
+
+@media (max-width: 1199px) {
+  .hero { min-height: 650px; }
+  .hero h1 { font-size: 91px; }
+  .hero-art { height: 650px; }
+  .project-copy { padding: 26px 22px; min-height: 440px; }
+}
+@media (max-width: 991px) {
+  .hero { min-height: 600px; grid-template-columns: 54% 46%; }
+  .hero h1 { font-size: 74px; }
+  .hero-art { height: 600px; margin-bottom: -15px; }
+  .hero-copy { padding-bottom: 45px; }
+  .project-card { display: block; }
+  .project-copy { min-height: 350px; padding: 30px; }
+  .project-copy h3 { max-width: 70%; }
+  .project-copy > p:not(.eyebrow):not(.project-status) { max-width: 65%; }
+  .project-visual img { object-position: right center; }
+}
+@media (max-width: 767px) {
+  .hero { min-height: 0; padding-top: 35px; }
+  .hero h1 { font-size: clamp(60px, 13vw, 84px); }
+  .hero-copy { padding-bottom: 0; }
+  .hero-art { height: 540px; margin-top: 18px; margin-bottom: 0; }
+  .hero::before { inset: -60px -100px -40px; background: radial-gradient(ellipse at 65% 65%, #eba447a0, transparent 45%), radial-gradient(ellipse at 10% 10%, #f3be785c, transparent 45%); }
+  .hero::after { width: 240px; height: 350px; top: 35px; right: -90px; opacity: .12; }
+  .interests { padding-top: 8px; }
+  .project-copy { min-height: 395px; padding: 27px 24px; }
+  .project-copy h3 { max-width: 87%; }
+  .project-copy > p:not(.eyebrow):not(.project-status) { max-width: 85%; }
+  .project-visual { min-height: 0; height: 100%; }
+  .project-visual img { height: 100%; width: 100%; inset: 0; }
+}
+@media (max-width: 575px) {
+  .hero h1 { font-size: clamp(56px, 14.6vw, 79px); }
+  .hero-art { height: 510px; }
+  .hobby-gym .hobby-illustration { width: calc(100% + 20px); height: 245px; }
+}
