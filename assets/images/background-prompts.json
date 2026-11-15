@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen",
+  "assets": {
+    "palm": {
+      "prompt": "Use case: stylized-concept. A newly generated seamless-feeling atmospheric BACKGROUND for a warm dreamy editorial personal website, no website layout or words. Match the mood of soft film photography with glowing amber light and poetic silhouettes: cream paper, pale caramel, muted burnt orange, warm gray shadows, delicate grain and strong optical blur. Understated, low contrast, mostly light ivory, large negative space. The motif must dissolve into the background with soft edges, never look like a cutout sticker. No text, typography, symbols, stars, borders, logos or watermark. Wide landscape composition. A softly luminous raised open human palm seen only as a diffuse shadow/silhouette through translucent paper, positioned on the left third, surrounded by dim orange-gold light like a hand reaching toward sunlight. Abstract and dreamy, anatomically plausible five fingers, no sharp skin detail. Right two thirds very pale cream with only faint warm light, for readable dark text.",
+      "saved_file": "C:\\Users\\Валентина\\Documents\\Codex\\2026-11-15\\new-chat\\outputs\\personal-portfolio\\assets\\images\\background-palm.webp"
+    },
+    "sun": {
+      "prompt": "Use case: stylized-concept. A newly generated seamless-feeling atmospheric BACKGROUND for a warm dreamy editorial personal website, no website layout or words. Match the mood of soft film photography with glowing amber light and poetic silhouettes: cream paper, pale caramel, muted burnt orange, warm gray shadows, delicate grain and strong optical blur. Understated, low contrast, mostly light ivory, large negative space. The motif must dissolve into the background with soft edges, never look like a cutout sticker. No text, typography, symbols, stars, borders, logos or watermark. Wide landscape composition. A hazy sun disc surrounded by subtle orange light leaks and warm grey photographic shadows, on the far right third. Suggest the warmth of fire and late sunlight, not a sharp sun icon. Left two thirds quiet light ivory, no hard rays or sharp edges. Softly glowing film exposure, not saturated neon.",
+      "saved_file": "C:\\Users\\Валентина\\Documents\\Codex\\2026-11-15\\new-chat\\outputs\\personal-portfolio\\assets\\images\\background-sun.webp"
+    },
+    "candles": {
+      "prompt": "Use case: stylized-concept. A newly generated seamless-feeling atmospheric BACKGROUND for a warm dreamy editorial personal website, no website layout or words. Match the mood of soft film photography with glowing amber light and poetic silhouettes: cream paper, pale caramel, muted burnt orange, warm gray shadows, delicate grain and strong optical blur. Understated, low contrast, mostly light ivory, large negative space. The motif must dissolve into the background with soft edges, never look like a cutout sticker. No text, typography, symbols, stars, borders, logos or watermark. Wide landscape composition. An atmospheric softly blurred candle and a faint heart-shaped flame-like glow in the far right lower portion, wax in ivory and honey brown, muted amber firelight. Extremely soft focus and low contrast so these remain background impressions, not prominent objects. Most of the image pale ivory and cream with warm gray shadows, left half almost empty. No literal graphic heart icon.",
+      "saved_file": "C:\\Users\\Валентина\\Documents\\Codex\\2026-11-15\\new-chat\\outputs\\personal-portfolio\\assets\\images\\background-candles.webp"
+    }
+  }
+}
