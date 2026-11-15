@@ -1,0 +1,28 @@
+[
+  {
+    "file": "craft-fox-hook.webp",
+    "transparent": true,
+    "prompt": "Use case: product-mockup. Asset type: transparent isolated editorial cutout for a warm elegant website hobby card. A very carefully handmade crocheted amigurumi fox peeking up from below the bottom edge of a card: oversized sweet fox head and UPPER BODY with two paws visible, NO full seated body and NO feet. Fox on the right of composition, round cream oatmeal yarn ball beside it on the left. In its forward-reaching paw the fox actively HOLDS a slender bronze crochet hook, angled diagonally toward the viewer and left; a single clearly visible continuous cream yarn thread passes through the hook and curves forward in a long graceful loose S-shaped strand across the foreground, extending beyond the fox and ball toward the bottom left so it can protrude beyond a website card. The other paw rests near the lower imaginary card edge. No actual card or ledge should be drawn. Complete head and ears with space above. Real fine crochet stitches, muted caramel burnt-orange cotton, cream muzzle and chest and inner ears, little dark embroidered eyes. Refined tactile photorealistic handmade product photography, dreamy soft warm studio lighting. Cream, caramel, peach and soft brown palette. Genuine transparent background with clean alpha, no floor or rectangular background, no scenery, no lettering, no text, no symbols. Wide 4:3 composition, subject fills most of frame.",
+    "mode": "built-in image_gen generate"
+  },
+  {
+    "file": "planet-clouds-light.webp",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset type: atmospheric transparent cutout for a dreamy editorial sci-fi reading hobby card, coherent with cream caramel peach portfolio artwork. A large luminous light apricot and pale honey Saturn-like ringed planet in the LOWER RIGHT, tilted elegant thin rings extending horizontally across the image. The planet is bright creamy golden, subtle pastel surface texture, never dark brown. Generous billowing airy peach and cream clouds around its lower half and behind it, drifting upward into a visible dreamy patch of PALE LAVENDER and dusty violet sky behind the upper right of the planet, like a soft little nebula vignette. A few very tiny distant luminous dust points in the lavender sky, no big decorative stars. Soft sunrise glow, delicate atmospheric depth, sophisticated photorealistic 3D editorial rendering, calm aesthetic, not cartoon or icon. Outer perimeter of the cloudy lavender sky vignette gently dissolves into REAL TRANSPARENCY, the planet and rings have clean edges; not a rectangular landscape. The cloud-and-sky patch must be clearly visible while still soft, occupies surrounding space. No text, no border, no frame, no interface. Landscape 4:3 composition, close framing, minimal empty margins.",
+    "mode": "built-in image_gen generate"
+  },
+  {
+    "file": "city-volgograd-dawn.webp",
+    "transparent": false,
+    "source": "city-volgograd.webp",
+    "prompt": "Use case: lighting-weather. Edit this Volgograd travel photograph ONLY for time of day and colour atmosphere. Preserve the exact recognizable Motherland Calls monument, sword, statue anatomy and architecture, scale, camera angle and composition. Make it a light airy dawn: warm peach-pink and pale lavender sky instead of blue, subtle rose-gold sunlight grazing the grey stone statue, foliage muted warm olive and bronze with much less green saturation. Cream ivory highlights and soft dusty mauve shadows, luminous elegant pastel sunrise, realistic photographic texture and fine analog grain. Bright and softly sunny, never strongly orange, never red fire or overly dramatic. No new objects, no text, no overlays or decorative graphics, no frame.",
+    "mode": "built-in image_gen edit"
+  },
+  {
+    "file": "city-petersburg-dawn.webp",
+    "transparent": false,
+    "source": "city-petersburg.webp",
+    "prompt": "Use case: lighting-weather. Edit this Saint Petersburg Saint Isaac's Cathedral photograph ONLY for time of day and colour atmosphere. Preserve exact cathedral architecture, golden central dome and smaller domes, facade columns, camera angle, proportions, square and composition. Make it a light airy dawn: warm peach-pink and pale lavender sky instead of blue, gentle rose-gold sunlight on the stone facade and dome, foliage muted warm olive and bronze with much less saturated green. Cream ivory highlights and soft dusty mauve shadows, luminous elegant pastel sunrise, realistic photographic texture and fine analog grain. Harmonious cream, peach, pale gold and muted lavender palette, bright and soft, never heavily orange or fiery. No new objects, no text, no overlays or graphics, no frame.",
+    "mode": "built-in image_gen edit"
+  }
+]
