@@ -1,0 +1,32 @@
+[
+  {
+    "file": "background-solar-mesh.webp",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset type: wide seamless-feeling editorial website background, landscape 3:2. Generate a sophisticated soft-focus solar mesh gradient: broad pools of honey amber, mellow apricot orange, golden ochre, peach and muted dusty mauve fading into warm ivory at edges. Analog film grain, ethereal blurred light leaks, subtle mottled tonal transitions, luminous but NOT neon or saturated red. An abstract warm dreamy editorial atmosphere, clearly varied orange-gold colour rather than plain beige. Quiet enough for dark brown typography over it. No objects, no hands, no people, no sun disc, no stars, no symbols, no text, no borders. Entire image is atmospheric colour and light.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "background-contact-hands.webp",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape 3:2 subtle dreamy editorial website section background. Cream ivory ground with softly blurred caramel and peach light. Two anatomically elegant hands reaching toward one another: upper hand descends from upper left toward centre, lower hand rises from bottom right toward centre. Hands are ethereal translucent silhouettes appearing through frosted glass, pale honey and muted amber, dissolving into the background, not a sharply cut out photograph. Keep hands mostly in the right half, left third quiet ivory and pale peach for dark text. Inspired by warm analog light-leak editorial art, soft film grain and diffuse sunlight. Low contrast, no intense fire or red, no distinct faces, no extra fingers, no lettering, no icons, no stars, no borders.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "city-volgograd.webp",
+    "transparent": false,
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 editorial travel image for a warm personal portfolio. Volgograd, Russia, the recognizable Motherland Calls monument on Mamayev Kurgan, full monumental woman holding the long straight sword aloft, correct sculptural silhouette, photographed from a respectful lower viewpoint with pale sky and a hint of green landscape. Soft sunny daylight, airy warm ivory, pale blue-grey sky, muted sage greenery, limestone grey statue, gentle peach-gold highlights. Elegant realistic photography with dreamy analog softness and delicate film grain, NOT illustration or clip art. Sunny and light but NOT intensely orange or fiery. No people close up, no text, no labels, no graphics, no frame.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "city-petersburg.webp",
+    "transparent": false,
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 editorial travel image for a warm personal portfolio, coherent with soft sunny Volgograd travel photography. Saint Petersburg Russia, recognizable Saint Isaac's Cathedral, large central golden dome and smaller domes, pale stone classical colonnade, gently sunlit facade and quiet square with faint green trees. Architectural proportions accurate, cinematic slightly low viewpoint with breathing room around the dome. Warm airy daylight, pale ivory and blue-grey sky, muted sage foliage, soft restrained gold dome and peach highlights. Dreamy analog photographic softness, fine film grain. Light and sunny but NOT intensely orange or fiery. No text, no labels, no graphics, no close-up people, no frame.",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "craft-fox-generated.webp",
+    "transparent": true,
+    "prompt": "Use case: product-mockup. Asset type: transparent cutout for an elegant warm editorial website hobby card, landscape composition 4:3. A beautifully handmade small crocheted amigurumi fox sitting beside one round ball of warm oatmeal yarn with a slender bronze crochet hook leaning naturally against the ball. Fox on the right, yarn on the left; show the complete fox including ears and paws. Fox made from muted burnt caramel orange cotton yarn, cream muzzle, cream chest and tail tip, small dark embroidered eyes, gentle sweet expression; highly refined crochet stitches visible, expertly crafted proportions. Soft warm studio sunlight and delicate natural shading, dreamy editorial product photograph, not cartoon, not flat icon, not plastic. Restrained cream, caramel, peach, muted brown palette. Isolated on genuinely transparent background with clean alpha edges, no floor rectangle, no scenery, no border, no lettering, no extra objects. Compact composition, minimal empty margins; useful to overlap the edge of a website card.",
+    "mode": "built-in image_gen"
+  }
+]
