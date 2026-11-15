@@ -626,8 +626,8 @@ a:focus-visible, summary:focus-visible {
 .hobby-gym::before { background-position: center, 65% 80%; }
 .hobby-books::before { background-position: center, 88% 15%; }
 .hobby-craft::before { background-position: center, 25% 80%; }
-.hobby-card .hobby-illustration { max-width: none; bottom: 28px; }
-.hobby-sport .hobby-illustration { width: calc(100% + 48px); height: 282px; right: -91px; }
+.hobby-card .hobby-illustration { max-width: none; bottom: 28px; object-position: right center; }
+.hobby-sport .hobby-illustration { width: calc(100% + 48px); height: 282px; right: -55px; }
 .hobby-gym .hobby-illustration { width: calc(100% + 60px); height: 280px; right: -30px; }
 .hobby-books .hobby-illustration { width: calc(100% + 78px); height: 250px; right: -39px; }
 .hobby-craft .hobby-illustration { width: calc(100% + 65px); height: 237px; right: -33px; mask-image: none; }
@@ -672,3 +672,4 @@ a:focus-visible, summary:focus-visible {
   .city-composition { height: 325px; }
   .city-petersburg { top: 145px; }
 }
+.hobby-sport .hobby-illustration { right: -55px; }
