@@ -858,8 +858,8 @@ body { font-size: 16px; }
 .hero-orbit .orbit-sheen { stroke: #fffef8; stroke-width: .75; stroke-dasharray: 36 1764; animation: orbit-light 30s linear infinite; filter: drop-shadow(0 0 2px #fff7d4); }
 .hero-orbit .orbit-star, .section-ribbon .ribbon-star {
   fill: none;
-  stroke: #fffef5;
-  stroke-width: .6;
+  stroke: none;
+  stroke-width: 0;
   stroke-linecap: round;
   filter: drop-shadow(0 0 2px #fff6cd);
   animation: pearl-glint 8s ease-in-out infinite;
@@ -928,7 +928,7 @@ body { font-size: 16px; }
     radial-gradient(ellipse at 12% 30%, #41458d24, transparent 60%);
   opacity: .85;
 }
-#dark-theme:checked ~ .site .hero::before { opacity: .16; mix-blend-mode: screen; filter: grayscale(1); }
+#dark-theme:checked ~ .site .hero::before { opacity: .26; mix-blend-mode: screen; filter: grayscale(1); }
 #dark-theme:checked ~ .site .hero-art::before { background: radial-gradient(ellipse at 60% 45%, #10107480, #08086460 45%, transparent 70%); opacity: .85; }
 #dark-theme:checked ~ .site .interests::before,
 #dark-theme:checked ~ .site .projects::before,
