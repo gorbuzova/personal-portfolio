@@ -791,3 +791,94 @@ body { font-size: 16px; }
 @media (prefers-reduced-motion: reduce) {
   .hobby-card:hover .hobby-illustration, .hobby-card[open] .hobby-illustration { transform: rotate(var(--art-tilt)); }
 }
+
+/* Biography uses the same ink and type size as the hero subtitle. */
+.about-story > p { color: var(--ink); font-size: 19px; line-height: 1.8; }
+.gym-note p { color: var(--ink); font-size: 16px; }
+#about-title, #interests-title, #projects-title, #contact-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(54px, 5.4vw, 76px);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.hero-actions .button { justify-content: center; min-width: 155px; gap: 0; }
+
+/* Keep the sky inside its card; only the fox's thread crosses the lower edge. */
+.hobby-books summary { overflow: hidden; border-radius: 17px; }
+.hobby-books .hobby-illustration { width: 100%; max-width: 100%; height: 280px; right: 0; bottom: 0; object-position: center bottom; }
+.hobby-books .hobby-trail { overflow: hidden; }
+.hobby-craft .hobby-illustration { width: calc(100% - 10px); height: 280px; right: 5px; bottom: -31px; object-position: center bottom; }
+
+/* Backgrounds overlap softly so the lower sections share a continuous warmth. */
+.about::before {
+  inset: -85px 0 -75px;
+  background: linear-gradient(90deg, #fbf1df20, #fbf1df45), url('../images/background-ember-heart.webp') right center / cover no-repeat;
+  opacity: .43;
+}
+.projects { z-index: 1; }
+.projects::before { bottom: 0; mask-image: linear-gradient(transparent, #000 15%, #000 90%, transparent); }
+.contact { z-index: 0; margin-top: 0; border-top: 0; padding-top: 66px; }
+.contact::before {
+  inset: -120px 0 -60px;
+  background: url('../images/background-solar-mesh.webp') 60% center / cover no-repeat;
+  opacity: .3;
+  mask-image: linear-gradient(transparent, #000 19%, #000 83%, transparent);
+}
+.contact::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  inset: -65px -2% auto auto;
+  width: min(100%, 900px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  clip-path: none;
+  background: url('../images/background-radiant-palm.webp') center / contain no-repeat;
+  opacity: .76;
+  mask-image: radial-gradient(ellipse closest-side, #000 35%, #000000b3 65%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Hairline reflections with a slow travelling highlight and restrained glints. */
+.hero-orbit { stroke-width: .55; }
+.hobby-trail { stroke-width: .55; opacity: .78; }
+.ribbon-white { stroke-width: .55; opacity: .68; }
+.ribbon-orange { stroke-width: .5; opacity: .36; filter: drop-shadow(0 0 1px #ffdda3); }
+.hero-orbit > ellipse:not(.orbit-sheen), .hobby-trail > path:not(.hobby-sheen), .ribbon-white { filter: drop-shadow(0 0 1.6px #fff9df); }
+.ribbon-sheen, .hobby-trail .hobby-sheen {
+  fill: none;
+  stroke: #fffef8;
+  stroke-width: .75;
+  stroke-dasharray: 20 380;
+  filter: drop-shadow(0 0 2px #fff7d4);
+  animation: silk-light 22s linear infinite;
+}
+.hero-orbit .orbit-sheen { stroke: #fffef8; stroke-width: .75; stroke-dasharray: 36 1764; animation: orbit-light 30s linear infinite; filter: drop-shadow(0 0 2px #fff7d4); }
+.hero-orbit .orbit-star, .section-ribbon .ribbon-star {
+  fill: none;
+  stroke: #fffef5;
+  stroke-width: .6;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 2px #fff6cd);
+  animation: pearl-glint 8s ease-in-out infinite;
+}
+.section-ribbon .ribbon-star { transform-box: fill-box; transform-origin: center; transform: scale(.75); }
+.glint-core { fill: #fffef5; stroke: none; }
+.about .ribbon-star, .hobby-gym .hobby-sheen { animation-delay: -3s; }
+.contact .ribbon-star, .hobby-books .hobby-sheen { animation-delay: -5s; }
+@keyframes silk-light { to { stroke-dashoffset: -800; } }
+@keyframes orbit-light { to { stroke-dashoffset: -1800; } }
+@keyframes pearl-glint { 0%, 100% { opacity: .58; } 50% { opacity: 1; } }
+#dark-theme:checked ~ .site .about::before { opacity: .24; }
+#dark-theme:checked ~ .site .contact::before { opacity: .12; }
+#dark-theme:checked ~ .site .contact::after { opacity: .4; }
+@media (max-width: 767px) {
+  .about-story > p { font-size: 18px; }
+  .gym-note p { font-size: 16px; }
+  .about::before { opacity: .32; background-position: 70% center; }
+  .contact { margin-top: 0; padding-top: 55px; }
+  .contact::after { inset: 105px -27% auto auto; width: 160%; background-size: cover; background-position: center; opacity: .48; }
+  .hero-actions .button { min-width: 138px; }
+}
