@@ -1,0 +1,12 @@
+[
+  {
+    "file": "background-ember-heart.webp",
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape 3:2 atmospheric background for the biography section of an elegant warm personal portfolio. An ethereal anatomical human heart silhouette, LARGE but softly obscured, radiating living amber light and a subtle fire energy through frosted glass and drifting haze. Place heart in the right third, gently emerging in peach orange and molten honey light, with delicate wisps of warm illuminated smoke and a faint luminous contour suggesting heat and vitality. NOT a Valentine's heart icon, NOT gore, NOT a medical illustration, NOT a sharply cut out object. Abstract editorial photographic double exposure, analog film grain, dreamy soft defocus. Ground colour warm cream ivory, peach and dusty mauve with gentle bronze shadows, a softly burning golden core but restrained overall contrast. Left half and centre mostly quiet cream and pale peach, suitable for dark brown text. Strong sense of warmth, inner fire and radiant light despite subdued brightness. Everything dissolves smoothly at edges. No people, no text, no borders, no symbols, no stars, no overlaid decorations.",
+    "mode": "built-in image_gen generate"
+  },
+  {
+    "file": "background-radiant-palm.webp",
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape 3:2 atmospheric website contacts background. ONE anatomically correct hand with palm facing the viewer, five fingers gently spread, pressed against the far side of a translucent screen or frosted glass. A luminous almost white golden silhouette, as if light and a gentle inner fire shine through the palm and fingertips, a soft honey-amber and peach corona around it. Place the single hand in the right half, palm centred about 70% across and 44% down, wrist descends into lower right. The hand is a diffuse luminous impression through glass, NOT a clean cutout, no sharp skin details, no photographic hand laid on top of the background. Warm grainy dreamy editorial atmosphere with hazy molten orange light leaks and soft dusty caramel shadows, energetic and sunlit, but moderate contrast for a website background. Left half quiet warm ivory and pale peach for brown headings. Avoid a dark brown overall background; no vivid saturated red flames; no second hand; no text; no borders; no stars or graphic decorations. Soft cream and pale gold highlights create the feeling of light reaching through the screen.",
+    "mode": "built-in image_gen generate"
+  }
+]
