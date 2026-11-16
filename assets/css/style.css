@@ -882,3 +882,68 @@ body { font-size: 16px; }
   .contact::after { inset: 105px -27% auto auto; width: 160%; background-size: cover; background-position: center; opacity: .48; }
   .hero-actions .button { min-width: 138px; }
 }
+
+/* User-supplied artwork: small visual overhangs, with space between objects. */
+.hobby-books summary { overflow: visible; }
+.hobby-books .hobby-trail { overflow: visible; }
+.hobby-books .hobby-illustration {
+  width: min(calc(100% + 90px), 400px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1;
+  left: 50%;
+  right: auto;
+  translate: -50% 0;
+  bottom: -60px;
+  object-position: center;
+}
+.hobby-craft .hobby-illustration {
+  width: min(calc(100% + 90px), 400px);
+  height: auto;
+  aspect-ratio: 1;
+  left: calc(50% + 10px);
+  right: auto;
+  translate: -50% 0;
+  bottom: -96px;
+  object-position: center;
+}
+.hero-actions .button { width: 190px; min-width: 0; padding: 10px 18px; }
+
+/* Blue theme: keep the page and panels visibly blue, including their glows. */
+#dark-theme:checked ~ .site {
+  --bg: #234674;
+  --surface: #2a4b77;
+  --panel: #385f8d;
+  --ink: #f1f5fc;
+  --muted: #cfdef0;
+  --accent: #a7cef2;
+  --line: #648ab4;
+  background: radial-gradient(ellipse at 90% 8%, #5784bd55, transparent 32%),
+    radial-gradient(ellipse at 8% 64%, #35649b55, transparent 38%), var(--bg);
+}
+#dark-theme:checked ~ .site .header-inner { border-bottom-color: #7898be55; }
+#dark-theme:checked ~ .site .hobby-card { background: linear-gradient(130deg, #274b79, #355e90); border-color: var(--line); }
+#dark-theme:checked ~ .site .hobby-card::before {
+  background: radial-gradient(ellipse at 80% 85%, #89b3dc50, transparent 65%),
+    radial-gradient(ellipse at 12% 30%, #789bd134, transparent 60%);
+  opacity: .85;
+}
+#dark-theme:checked ~ .site .hero::before { opacity: .16; mix-blend-mode: screen; }
+#dark-theme:checked ~ .site .hero-art::before { background: radial-gradient(ellipse at 60% 45%, #6f9dccb3, #486fae70 45%, transparent 70%); opacity: .85; }
+#dark-theme:checked ~ .site .interests::before,
+#dark-theme:checked ~ .site .projects::before,
+#dark-theme:checked ~ .site .contact::before {
+  background: radial-gradient(ellipse at 22% 50%, #4b79ab4d, transparent 65%),
+    radial-gradient(ellipse at 80% 70%, #748abf2b, transparent 60%);
+  opacity: .9;
+}
+#dark-theme:checked ~ .site .about::before { opacity: .18; mix-blend-mode: screen; }
+#dark-theme:checked ~ .site .contact::after { opacity: .3; mix-blend-mode: screen; }
+#dark-theme:checked ~ .site .button-outline { background: #c8e2ff0a; }
+#dark-theme:checked ~ .site .button-outline:hover { background: var(--panel); }
+#dark-theme:checked ~ .site .ribbon-orange { stroke: #95bee3; filter: drop-shadow(0 0 1px #a5c9ed); }
+#dark-theme:checked ~ .site ::selection { background: #87b8e4; color: #153458; }
+@media (max-width: 767px) {
+  .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: 390px; }
+  .hero-actions .button { width: 100%; min-width: 0; padding-inline: 12px; }
+}
