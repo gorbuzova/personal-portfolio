@@ -33,6 +33,7 @@ index.html                   — разделы, тексты и ссылки
 assets/css/style.css         — оформление, темы и адаптивность
 assets/css/bootstrap.min.css — сетка Bootstrap
 assets/css/fonts.css         — подключение шрифтов
+assets/js/copy-email.js       — копирование адреса почты
 assets/fonts/                — шрифты и их лицензии
 assets/images/               — фотография, иллюстрации, фоны и иконка сайта
 ```
@@ -43,4 +44,4 @@ HTML5, CSS3 и CSS-часть Bootstrap 5.3.3. Меню, переключате�
 
 Иллюстрации сгенерированы, фотография — моя. Шрифты подключены локально и распространяются по SIL Open Font License, Bootstrap — по MIT; файлы лицензий находятся рядом с ними.
 
-JavaScript, сборка и серверная часть не используются. Тексты и ссылки редактируются в `index.html`, оформление — в `assets/css/style.css`. Сайт опубликован через GitHub Pages из корня ветки `main`.
+Небольшой JavaScript используется только для копирования почты через Clipboard API (на HTTPS или localhost). Сборка и серверная часть не используются. Тексты и ссылки редактируются в `index.html`, оформление — в `assets/css/style.css`. Сайт опубликован через GitHub Pages из корня ветки `main`.

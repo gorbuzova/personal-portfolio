@@ -947,3 +947,32 @@ body { font-size: 16px; }
   .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: 390px; }
   .hero-actions .button { width: 100%; min-width: 0; padding-inline: 12px; }
 }
+
+/* Watercolour originals retain their proportions and soft edges. */
+.city-composition { height: 510px; }
+.city-image { width: 73%; aspect-ratio: 1122 / 1402; object-fit: contain; border: 0; border-radius: 0; box-shadow: none; }
+.city-petersburg { top: 205px; mask-image: none; }
+.hobby-books .hobby-illustration { aspect-ratio: 1402 / 1122; bottom: -35px; }
+/* Radial fills fade both the width and brightness at the ends of each glint. */
+.travelling-glint { stroke: none; filter: drop-shadow(0 0 2px #fff7dd); }
+.hero-orbit .orbit-star { transform-box: fill-box; transform-origin: center; animation: star-breathe 7s ease-in-out infinite; }
+.section-ribbon .ribbon-star { animation: small-star-breathe 8s ease-in-out infinite; }
+.glint-core { animation: core-glow 4s ease-in-out infinite; }
+@keyframes star-breathe { 0%, 100% { transform: scale(.95, .92); opacity: .62; } 50% { transform: scale(1.05, 1.15); opacity: 1; } }
+@keyframes small-star-breathe { 0%, 100% { transform: scale(.72, .69); opacity: .62; } 50% { transform: scale(.79, .86); opacity: 1; } }
+@keyframes core-glow { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+.email-contact { position: relative; }
+.email-contact > a { height: auto; padding-bottom: 4px; }
+.copy-email { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 24px; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--ink); cursor: pointer; }
+.copy-email[hidden] { display: none; }
+.copy-email:hover { opacity: .7; }
+.copy-email .icon { width: 16px; height: 16px; }
+.email-address { display: flex; align-items: center; gap: 5px; }
+.email-address > a { min-width: 0; height: auto; padding: 0; border: 0; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+.copy-email:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.email-contact small { display: block; }
+@media (max-width: 991px) { .city-composition { height: 535px; } .city-petersburg { top: 215px; } }
+@media (max-width: 575px) { .city-composition { height: 465px; } .city-petersburg { top: 180px; } }
+@media (prefers-reduced-motion: reduce) { .glint-track { display: none; } .orbit-star, .ribbon-star, .glint-core { animation: none !important; } }
+
+.hobby-books .hobby-illustration { mask-image: radial-gradient(ellipse closest-side, #000 58%, #000c 78%, transparent 100%); }
