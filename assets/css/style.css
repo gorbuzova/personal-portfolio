@@ -953,8 +953,9 @@ body { font-size: 16px; }
 .city-image { width: 73%; aspect-ratio: 1122 / 1402; object-fit: contain; border: 0; border-radius: 0; box-shadow: none; }
 .city-petersburg { top: 205px; mask-image: none; }
 .hobby-books .hobby-illustration { aspect-ratio: 1402 / 1122; bottom: -35px; }
-/* Radial fills fade both the width and brightness at the ends of each glint. */
-.travelling-glint { stroke: none; filter: drop-shadow(0 0 2px #fff7dd); }
+/* Layered dashes follow the full curve; shorter inner strokes taper the ends. */
+.glint-track .curve-glint { fill: none; stroke: #fffef8; stroke-linecap: round; filter: drop-shadow(0 0 1.4px #fff7dd); stroke-dashoffset: var(--glint-start); animation: curve-light 22s linear infinite; }
+@keyframes curve-light { from { stroke-dashoffset: var(--glint-start); } to { stroke-dashoffset: var(--glint-end); } }
 .hero-orbit .orbit-star { transform-box: fill-box; transform-origin: center; animation: star-breathe 7s ease-in-out infinite; }
 .section-ribbon .ribbon-star { animation: small-star-breathe 8s ease-in-out infinite; }
 .glint-core { animation: core-glow 4s ease-in-out infinite; }
