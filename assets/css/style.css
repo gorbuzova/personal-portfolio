@@ -977,3 +977,7 @@ body { font-size: 16px; }
 @media (prefers-reduced-motion: reduce) { .glint-track { display: none; } .orbit-star, .ribbon-star, .glint-core { animation: none !important; } }
 
 .hobby-books .hobby-illustration { mask-image: radial-gradient(ellipse closest-side, #000 58%, #000c 78%, transparent 100%); }
+
+/* Upright user artwork keeps its transparent edges and a small lower overhang. */
+.hobby-gym .hobby-illustration { width: calc(100% + 50px); height: 335px; right: -25px; bottom: -52px; --art-tilt: 0deg; object-position: center bottom; }
+@media (max-width: 575px) { .hobby-gym .hobby-illustration { height: 350px; bottom: -55px; } }
